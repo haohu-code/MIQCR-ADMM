@@ -1,6 +1,7 @@
 function row = run_experiment(task, total_limit, p1_limit, folder)
-% Run one instance with MIQCR-ADMM, MIQCR-CB, or direct Gurobi.
+% Run one instance with MIQCR-FR (using ADMM), MIQCR-CB, or direct Gurobi.
 % Task = 3*(manifest row - 1) + method index, in the order ADMM, CB, GUROBI.
+% ADMM is the saved method identifier for the MIQCR-FR implementation.
 % P1 includes the SDP solve, reformulation, and starting-point checks.
 % P2 is one direct mixed-integer solve and validation of the returned solution.
 

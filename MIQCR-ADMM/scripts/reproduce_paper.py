@@ -4,10 +4,11 @@
 Usage (from MIQCR-ADMM):
     python3 scripts/reproduce_paper.py outputs/paper_tables
 
-The calculation has three steps: validate the saved records, exclude the known
-invalid CB bound, and write the summary and per-instance tables. The final
-checks compare the tables with the archived paper versions. This script describes
-one fixed experiment; use collect_results.py to summarize new solver runs.
+The script validates the saved records, excludes the known invalid CB bound,
+and writes the summary and per-instance tables. It checks those tables against
+the archived paper versions before updating the display name from ADMM to
+MIQCR--FR. Saved method identifiers are unchanged. This script describes one
+fixed experiment; use collect_results.py to summarize new solver runs.
 """
 
 import argparse
@@ -381,8 +382,18 @@ def main():
     # 3. Check that the generated LaTeX agrees with the archived paper tables.
     expected = json.loads((archive / "expected_tables_sha256.json").read_text())
     check_file_hashes(output, expected)
+
+    # 4. Use the current paper name after checking every historical table byte.
+    # ADMM remains the method identifier in the archived CSV and validation files.
+    # Only the displayed method cell changes; all measurements stay unchanged.
+    for filename in expected:
+        table = output / filename
+        original_text = table.read_text()
+        table.write_text(original_text.replace(" & ADMM & ", " & MIQCR--FR & "))
+
     print(json.dumps(audit, indent=2))
-    print("All 8 LaTeX tables match the archived paper tables byte for byte.")
+    print("All 8 historical tables verified byte for byte before relabeling.")
+    print("Output tables use MIQCR--FR; archived ADMM identifiers are unchanged.")
     print("Known nug25 CB bound rejection retained; see validation/audit.json.")
 
 

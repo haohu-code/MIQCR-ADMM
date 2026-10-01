@@ -4,12 +4,15 @@
 
 Use all 431 instances in data/manifest.csv, in its hashed order: 61 QAP,
 102 cycle-cover, 30 semi-assignment, 90 k-cluster, 72 partitioning and76 QSPP.
-Task3*(k-1)+[1,2,3] selects ADMM, CB, GUROBI for manifest rowk. All methods
+Task3*(k-1)+[1,2,3] selects MIQCR–FR, MIQCR-CB, and direct Gurobi for
+manifest rowk. The saved method identifiers remain `ADMM`, `CB`, `GUROBI`.
+MIQCR–FR is the paper name for the ADMM implementation in this protocol.
+All methods
 start from the same structural feasible point. No previous incumbents are
 used as starts, cutoffs, objective bounds or stopping criteria.
 
-ADMM solves the equality-face DNN relaxation and constructs its convex MIQP
-by continuous-bound optimization. QAP retains the box/gangster treatment;
+MIQCR–FR uses ADMM to solve the equality-face DNN relaxation, then constructs
+its convex MIQP by continuous-bound optimization. QAP retains the box/gangster treatment;
 other families use the arrow/nonnegative block. No product pruning or extra
 relaxation strengthening is introduced. The binary-exact Hessian guard is
 recorded. CB uses SMIQP's existing reformulation with coefficient-omission

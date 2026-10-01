@@ -1,9 +1,16 @@
-# MIQCR–ADMM
+# MIQCR–FR: ADMM implementation
 
 MATLAB implementation accompanying **Exact Convex Reformulations of Binary
 Quadratic Programs from Facially Reduced Semidefinite Relaxations** by Hao Hu
-and Mingming Xu. The solver uses facial reduction, ADMM and continuous-bound
-optimization for equality-constrained binary quadratic problems.
+and Mingming Xu. MIQCR–FR combines facial reduction with exact convex
+reformulation for equality-constrained binary quadratic problems. This
+implementation uses ADMM to solve the reduced relaxation and continuous-bound
+optimization to construct the convex MIQP.
+
+The paper and generated LaTeX tables use the name **MIQCR–FR**. Runner options
+and CSV/MAT records retain the method identifier `ADMM`; the repository URL
+and directory name `MIQCR-ADMM` also remain unchanged. These names refer to the
+same tested implementation, not different algorithms or experiments.
 
 ## Reproduce the paper tables (no solver required)
 
@@ -14,10 +21,11 @@ python3 scripts/reproduce_paper.py outputs/paper_tables
 ```
 
 Choose a new output directory. This checks the archived records, regenerates
-all eight LaTeX tables, and checks that they match the paper tables byte for
-byte. It also writes per-instance CSV results and validation/summary.csv,
+all eight LaTeX tables, and checks them byte for byte against the historical
+tables before replacing the displayed `ADMM` label with `MIQCR–FR`.
+It also writes per-instance CSV results and validation/summary.csv,
 including P1/P2 times and finite-gap denominators. The expected counts are
-296 ADMM, 156 CB and 187 direct-Gurobi certifications. The known nug25 CB
+296 MIQCR–FR, 156 CB and 187 direct-Gurobi certifications. The known nug25 CB
 bound failure remains explicitly flagged; its time and verified incumbent
 are retained. See [the archive description](results/paper/README.md).
 This reproduces reporting from saved measurements, not new solver timings.
@@ -43,7 +51,7 @@ setup;
 run_batch([1,3], 'outputs/quickstart', 30, 10);
 ```
 
-These tasks run ADMM and direct Gurobi on chr12a (144 binary variables), with
+These tasks run MIQCR–FR and direct Gurobi on chr12a (144 binary variables), with
 30 seconds total and at most 10 seconds for the Phase-1 solver. Each creates
 CSV, MAT and log files. The known optimum is 9552; a short run may stop before
 proving it. Collect the results with:
@@ -58,7 +66,7 @@ validated bounds; all available measured times are retained.
 
 ## Optional MIQCR-CB comparison
 
-ADMM and direct Gurobi do not require CB. To run CB, first follow
+MIQCR–FR and direct Gurobi do not require CB. To run CB, first follow
 [the Linux build instructions](docs/BUILD_CB.md); Python 3 is also required
 for its timeout wrapper. Set `MIQCR_EXTERNAL` before starting MATLAB to the
 absolute directory containing the built `MIQCR-CB/` folder. Then:
@@ -74,7 +82,8 @@ The CB build is tested on x86-64 Linux; other platforms are not validated.
 ## Rerun the full benchmark
 
 The [hashed manifest](data/manifest.csv) fixes 431 instances from six families.
-For manifest row k, tasks `3*(k-1)+[1,2,3]` select ADMM, CB and direct Gurobi.
+For manifest row k, tasks `3*(k-1)+[1,2,3]` select MIQCR–FR, MIQCR-CB and
+direct Gurobi (saved identifiers `ADMM`, `CB`, `GUROBI`).
 All three use the same saved initial feasible solution.
 
 ```matlab

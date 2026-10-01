@@ -1,7 +1,7 @@
 # MIQCR-CB dependency
 
 `source/Smiqp-1.0/` contains the SMIQP 1.0 source, including its license and
-bundled solver dependencies. The MIQCR-ADMM runner invokes
+bundled solver dependencies. The MIQCR–FR experiment runner invokes
 `source/Smiqp-1.0/src/Alg/smiqp` for MIQCR-CB Phase 1 and reads the opt-in
 `SMIQP_EXPORT_PHASE2` output. Build the executable from this source before
 running MIQCR-CB tasks; compiled objects and executables are not distributed
