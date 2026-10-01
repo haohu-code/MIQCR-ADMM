@@ -7,14 +7,14 @@ by **Hao Hu and Mingming Xu**.
 This repository contains the ADMM implementation of MIQCR–FR, our framework
 for convex reformulation using facial reduction, together with benchmark
 inputs and scripts to reproduce the paper's tables or run new experiments.
-The repository URL and `MIQCR-ADMM/` directory retain their existing names.
+The repository and implementation directory are both named `MIQCR-FR`.
 
-See [Getting started](MIQCR-ADMM/README.md) for installation and reproduction
+See [Getting started](MIQCR-FR/README.md) for installation and reproduction
 instructions.
 
-- `MIQCR-ADMM/`: our MATLAB implementation, 431 selected inputs, and paper records.
+- `MIQCR-FR/`: our MATLAB implementation, 431 selected inputs, and paper records.
 - `external/MIQCR-CB/`: optional SMIQP/MIQCR-CB source and its dependencies.
 
 Our original code is MIT licensed. Third-party software retains its own
 notices and licenses; benchmark data is not covered by our MIT grant.
-See [data provenance](MIQCR-ADMM/data/PROVENANCE.md).
+See [data provenance](MIQCR-FR/data/PROVENANCE.md).

@@ -1,6 +1,6 @@
 **/__pycache__/
 *.py[cod]
 .DS_Store
-MIQCR-ADMM/outputs/
+MIQCR-FR/outputs/
 *.asv
 # Build external solvers in a separate directory (docs/BUILD_CB.md).

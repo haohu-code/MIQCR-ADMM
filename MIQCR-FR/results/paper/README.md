@@ -9,7 +9,7 @@ protects archive inputs; expected_tables_sha256.json identifies the eight
 historical LaTeX tables. Their `ADMM` method label is now displayed as
 `MIQCR–FR` in the paper. The records and historical checksums remain unchanged.
 
-From the MIQCR-ADMM directory run:
+From the MIQCR-FR directory run:
 
     python3 scripts/reproduce_paper.py outputs/paper_tables
 

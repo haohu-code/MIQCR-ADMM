@@ -14,7 +14,7 @@ The original archive has SHA-256
 The included source contains local portability and Phase-2 export changes,
 followed by the stopping/checkpoint changes below. All bundled third-party
 license notices are retained. The current Linux build is documented in
-[BUILD_CB.md](../../MIQCR-ADMM/docs/BUILD_CB.md). Historical Python experiment
+[BUILD_CB.md](../../MIQCR-FR/docs/BUILD_CB.md). Historical Python experiment
 settings are not used by this release.
 
 ## Graceful binary Phase-1 stopping (September 24, 2026)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate the paper tables from saved measurements, without running solvers.
 
-Usage (from MIQCR-ADMM):
+Usage (from MIQCR-FR):
     python3 scripts/reproduce_paper.py outputs/paper_tables
 
 The script validates the saved records, excludes the known invalid CB bound,

@@ -8,9 +8,9 @@ implementation uses ADMM to solve the reduced relaxation and continuous-bound
 optimization to construct the convex MIQP.
 
 The paper and generated LaTeX tables use the name **MIQCR–FR**. Runner options
-and CSV/MAT records retain the method identifier `ADMM`; the repository URL
-and directory name `MIQCR-ADMM` also remain unchanged. These names refer to the
-same tested implementation, not different algorithms or experiments.
+and CSV/MAT records retain the method identifier `ADMM` to match the archived
+measurements. The repository and implementation directory are named `MIQCR-FR`.
+The saved identifier and paper name refer to the same tested implementation.
 
 ## Reproduce the paper tables (no solver required)
 

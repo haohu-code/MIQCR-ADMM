@@ -25,5 +25,5 @@ the row order of manifest.csv for all six classes.
 These are the selected inputs for the completed 431-instance paper experiment,
 not the full upstream archives. Historical study names identify provenance
 only. See [PROVENANCE.md](PROVENANCE.md) for sources and distribution status.
-The manifest paths are relative to MIQCR-ADMM; no private checkout is needed
+The manifest paths are relative to MIQCR-FR; no private checkout is needed
 to load the supplied MAT files.
