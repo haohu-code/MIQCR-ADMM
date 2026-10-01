@@ -1,0 +1,5 @@
+{
+  "source": "cb_checkpoint_20260925/paper_tables/results.csv (historical validation source; not solver input)",
+  "sha256": "00786f61c9eae4fd9cad01bd6674d9762f34e3db7bc2ef73fee0f1075c0e7f9c",
+  "use": "collection validation only; never optimization"
+}

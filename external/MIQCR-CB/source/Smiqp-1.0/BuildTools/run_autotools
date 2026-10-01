@@ -1,0 +1,606 @@
+#!/bin/bash
+
+# Copyright (C) 2006, 2007, 2008, 2009, 2010  International Business Machines
+# and others.
+# All Rights Reserved.
+# This file is distributed under the Eclipse Public License.
+# It is part of the BuildTools project in COIN-OR (www.coin-or.org)
+#
+# Author: Andreas Waechter     IBM      2006-04-14
+# Modified: Lou Hafer          SFU      2010-06-11
+#      Mods to allow variations from standard package structure. Decision to
+#      process a configure.ac file is based on presence of COIN macros.
+#      Directories specified on the command line are recursively searched
+#      for configure.ac files. Install-sh signals an independent unit.
+# Modified: Lou Hafer          SFU      2010-07-08
+#      More mods to maintain flexibility but be a bit less aggressive about
+#      forcing installation of autotools auxilliary scripts. Also add some
+#      command line options and restore ability to specify individual
+#      directories on the command line.
+# Modified: Lou Hafer	       retired	2017-05-17
+#      Allow that we can use bash. Make sure help always works.
+
+# run_autotools takes care of running the autotools (automake, autoconf,
+# and helpers) and also makes a few arrangements for when configure and
+# libtool execute at configuration, build, and installation.
+
+# Run_autotools can be given a set of directories on the command line; if none
+# are specified, it assumes the current directory (`.').  Subdirectories are
+# searched for configure.ac files unless suppressed with the -nr option.
+# Autotools will consider a directory for processing if any AC_COIN_ macro is
+# present in the configure.ac file. Should it be necessary to fool this script
+# into processing a file that otherwise contains no COIN macros, just add a
+# line with AC_COIN_.  The resulting list is winnowed to remove directories
+# specified in COIN_SKIP_PROJECTS.
+
+# Each directory processed gets a temporary link to BuildTools, unless a
+# BuildTools subdirectory is already present. Mostly this is a convenience, but
+# one thing makes it mandatory: Many Makefile.am files in COIN use an include
+# directive to pull in BuildTools/Makemain.inc. There's no way I (lh) can see
+# to alter the path that's hardcoded in the include directive. Just to make it
+# more interesting, COIN projects are generally constructed with the assumption
+# that BuildTools will be one or two directories up, so you'll see things like
+# `include ../BuildTools/Makemain.inc'. run_autotools doesn't understand this
+# hierarchy, so it keeps all those temporary BuildTools links until the very
+# end. That way, it works with the old-style COIN organisation where a
+# BuildTools directory is pulled in as an external in the top directory of a
+# package, and with the new-style independent organisation, where there may be
+# only a single copy of BuildTools out there somewhere.
+
+# If any subdirectory queued for processing is found to contain an install-sh
+# script, it is treated as an independent unit (i.e., you can run `make
+# install' from this directory) and the set of auxilliary scripts is refreshed.
+# You can suppress installation of install-sh and associated
+# scripts with the -ni option. It's good to read the autoconf documentation for
+# AC_CONFIG_AUX_DIR if this doesn't make sense to you.
+
+# The required autotools versions, along with a few other differences. Current
+# (trunk) versions first, older (stable) versions next.
+
+case "${COIN_ENV:-git}" in
+  "mixed" )
+    repoDir='.git .svn'
+    ver_autoconf='2.69'
+    ver_automake='1.16.1'
+    ver_libtool='2.4.6'
+    ltfile=$AUTOTOOLS_DIR/share/libtool/build-aux/ltmain.sh
+    autotoolsFiles="config.guess config.sub depcomp install-sh"
+    autotoolsFiles="$autotoolsFiles ltmain.sh missing compile"
+    ;;
+  "git" )
+    repoDir='.git'
+    ver_autoconf='2.69'
+    ver_automake='1.16.1'
+    ver_libtool='2.4.6'
+    ltfile=$AUTOTOOLS_DIR/share/libtool/build-aux/ltmain.sh
+    autotoolsFiles="config.guess config.sub depcomp install-sh"
+    autotoolsFiles="$autotoolsFiles ltmain.sh missing compile"
+    ;;
+  "trunk" )
+    repoDir='.svn'
+    ver_autoconf='2.69'
+    ver_automake='1.16.1'
+    ver_libtool='2.4.6'
+    ltfile=$AUTOTOOLS_DIR/share/libtool/build-aux/ltmain.sh
+    autotoolsFiles="config.guess config.sub depcomp install-sh"
+    autotoolsFiles="$autotoolsFiles ltmain.sh missing compile"
+    ;;
+  "stable" )
+    repoDir='.svn'
+    ver_autoconf='2.59'
+    ver_automake='1.9.6'
+    ver_libtool='1.5.22'
+    ltfile=$AUTOTOOLS_DIR/share/libtool/ltmain.sh
+    autotoolsFiles="config.guess config.sub depcomp install-sh"
+    autotoolsFiles="$autotoolsFiles ltmain.sh missing"
+    ;;
+  * )
+    echo "Unknown COIN environment '$COIN_ENV'. Aborting."
+    exit
+    ;;
+esac
+
+# Define a cleanup function. We'll set a trap below, just before we start to
+# do actual work.
+
+cleanupOnErrorExit ()
+{ for link in $buildtoolsLinks; do
+    echo Trap: removing $link
+    rm -rf $link
+  done
+  cd $startDir
+}
+
+# Subroutine to print the help message.
+
+printHelp () {
+  cat <<EOF
+usage: run_autotools [-h] [-[n]r] [-ni] [-f] [ directory directory ... ]
+
+  -h  | --help           print help message and exit
+  -r  | --recursion      do recursive search for configure.ac files
+  -nr | --no-recursion   do not do recursive search for configure.ac files
+  -ni | --dependent      do not install scripts necessary for an independent
+  			 unit
+  -f  | --foreign        process foreign configuration files (configure.ac
+                         does not contain COIN configuration macros).
+  -d  | --dryrun         exit immediately after determining the list of
+                         directories to be processed
+
+  Default is no recursion, install scripts for an independent unit.
+
+  If no directories and -r are specified, the tree rooted at the current
+  directory is searched recursively for directories with configure.ac
+  files containing COIN configuration macros (AC_COIN_*) and autotools
+  is run in those directories. Directories listed in COIN_SKIP_PROJECTS
+  are skipped.  If directories are specified on the command line, the
+  search for configure.ac files is restricted to the specified directories.
+  In each directory where a configure.ac file is found, this script will
+  refresh a set of autotools scripts (listed below) necessary for a unit that
+  will be installed independently.
+
+  The -ni (--dependent) option will suppress refresh of the autotools scripts
+  (but will not delete existing scripts). This will be suppressed in *all*
+  directories processed.
+
+  The most common scenario for run_autotools is to process a project with a
+  configure.ac file in the top-level directory of the project and no nested
+  configure.ac files. Hence the default of no recursion and install autotools
+  scripts.  The -r option is useful if you have multiple COIN projects in
+  sibling directories and want to do a batch run of autotools on all of them.
+
+  The -f (--foreign) option causes run_autotools to process any configure.ac,
+  even if it contains no COIN macros. Occasionally useful for adapting
+  ThirdParty native configuration for COIN. Be sure you know what you're
+  doing.
+
+  The environment variable AUTOTOOLS_DIR can be used to point to an alternate
+  installation of the autotools (current location $AUTOTOOLS_DIR)
+
+  Default autotools versions:
+    autoconf: $ver_autoconf
+    automake: $ver_automake
+    libtool:  $ver_libtool
+
+  Autotools scripts: ${autotoolsFiles}
+EOF
+}
+
+# Subroutine to check that a given autotools command is present, has the
+# correct version, and is being sourced from the correct directory.
+
+checkAutotoolVersion () {
+  local toolName=$1
+  local requiredVer=$2
+  local escapedVer=`echo $requiredVer | sed -e 's/\./\\\./g'`
+
+  if ! command -v $toolName &>/dev/null ; then
+    echo "$toolName not available!"
+    return 1
+  fi
+
+  local toolVer=`$toolName --version`
+  if ! expr "$toolVer" : '.*'"$escapedVer"'.*' &>/dev/null ; then
+    echo "You are not using the required version $requiredVer of $toolName (" `which $toolName` ")"
+    return 2
+  fi
+
+  local toolDir=`command -v $toolName | sed -e "s,/$toolName,,"`
+  toolDir=`cd $toolDir ; pwd`
+  local autoDir=`cd $AUTOTOOLS_DIR/bin ; pwd`
+  if [[ "$toolDir" != "$autoDir" ]] ; then
+    echo "$toolName is not picked up from the correct location."
+    return 3
+  fi
+    
+}
+
+# A couple of subroutines to decide if a directory is a project, and to find
+# projects under a given directory. Pulled out as subroutines in anticipation
+# that I'll want to expand the test when git comes into the picture.
+
+# Subroutine to decide if a directory is a project. The test is presence
+# of a $repoDir (.git or .svn are the known types). There's no protection
+# against specifying an interior directory. The loop allows for mixed git and
+# svn project directories.
+
+isAProject () {
+  for lcldir in $repoDir ; do
+    if [[ -d $1/${lcldir} ]] ; then
+      return 0
+    fi
+  done
+  return 1
+}
+
+# Subroutine to find the project directories under a given directory. The test
+# is presence of a $repoDir directory.
+
+findProjects () {
+  local dirs
+  local tmp
+  for dir in $repoDir ; do
+    tmp=$( find $1 -type d -name ${dir} -print -prune )
+    tmp=`echo $tmp | sed -e "s,/${dir},,g"`
+    dirs="$dirs $tmp"
+  done
+  echo $dirs
+}
+
+
+# Set up a default location for autotools executables, macros, etc. This
+# can be overidden if the user sets AUTOTOOLS_DIR in the environment. If this
+# directory is not already in the PATH, add it.
+
+if [[ -z "$AUTOTOOLS_DIR" ]] ; then
+  AUTOTOOLS_DIR=/usr
+fi
+if ! expr ":${PATH}:" : '.*:'"${AUTOTOOLS_DIR}"'/bin:.*' &>/dev/null ; then
+  export PATH=$AUTOTOOLS_DIR/bin:$PATH
+fi
+
+# See if the user just wants help, before we get into the thick if it.
+
+for arg in "$@" ; do
+  case $arg in
+    -h | -help | --h | --help )
+      printHelp
+      exit
+      ;;
+    esac
+done
+
+# Make sure we bail out if there is an error
+
+set -e
+
+# Determine the source of run_autotools and confirm that it is a BuildTools
+# directory with a copy of coin.m4.
+# If there are no '/' chars in the command name, then run_autotools lives
+# in some directory of PATH --- look there. Otherwise grab the prefix off
+# the command name. Then, if we have a relative path, convert it to absolute
+# using the current directory as a prefix.  Clean up the result by compressing
+# `XXX/../', '/./', '//' sequences and removing trailing '/.' and 'XXX/..'.
+
+startDir=`pwd`
+myName=${0##*/}
+if expr "$0" : '.*/.*' &>/dev/null ; then
+  runautotoolDir=`echo $0 | sed -e 's,\(.*\)/[^/]*,\1,'`
+else
+  for dir in $( echo $PATH | sed 's/:/ /' ) ; do
+    if test -x "${dir}/${myName}" ; then
+      runautotoolDir=$dir
+      break
+    fi
+  done
+fi
+if  expr "$runautotoolDir" : '/.*' >/dev/null 2>&1 ; then
+  :
+else
+  runautotoolDir=$startDir/$runautotoolDir
+fi
+while expr "$runautotoolDir" : '.*/\.\.' >/dev/null 2>&1 ; do
+  runautotoolDir=`echo $runautotoolDir | \
+                  sed -e 's,/[^/][^/]*/\.\./,/,' -e 's,/[^/][^/]*/\.\.$,,'`
+done
+runautotoolDir=`echo $runautotoolDir | \
+		sed -e 's,/\./,/,g' -e 's,//,/,g' -e 's,/.$,,'`
+
+if [[ ! -f ${runautotoolDir}/coin.m4 ]] ; then
+  echo "Found $myName in $runautotoolDir but coin.m4 is not present."
+  exit
+fi
+
+# Make sure we're using the correct versions of autoconf and automake. Failure
+# to satisfy this requirement is a fatal error.
+
+if ! checkAutotoolVersion autoconf $ver_autoconf ; then
+  exit 2
+fi
+if !  checkAutotoolVersion automake $ver_automake ; then
+  exit 2
+fi
+
+# Failure to find the correct version of ltmain.sh isn't fatal here, but the
+# user should be warned.
+
+if [[ ! -r $ltfile ]] ; then
+  echo "WARNING: Cannot find libtool shell $ltfile"
+fi
+if ! grep -F $ver_libtool $ltfile &>/dev/null ; then 
+  echo WARNING: You are not using the correct version of libtool
+fi
+
+# Set up to process parameters. No parameters is the default.
+
+doRecurse=0
+suppressScripts=0
+userSpecifiedDirs=0
+dryRun=0
+
+# Process the parameters. A parameter without an opening `-' is assumed to be
+# a spec for a directory to be processed. We really shouldn't see -h here, but
+# it's easy to deal with it.
+
+while [[ $# -gt 0 ]] ; do
+  case "$1" in
+    -h* | --h* )
+      printHelp
+      exit
+      ;;
+    -r* | --recursion )
+      doRecurse=1
+      ;;
+    -nr | --no-recursion )
+      doRecurse=0
+      ;;
+    -ni | --dependent )
+      suppressScripts=1
+      ;;
+    -d | --dryrun )
+      dryRun=1
+      ;;
+    -f | --foreign )
+      doForeign=1
+      ;;
+    -* ) echo "$0: unrecognised command line switch '"$1"'."
+      printHelp=1
+      ;;
+     * ) userDirs+=($1)
+      userSpecifiedDirs=1
+      ;;
+  esac
+  shift
+done
+
+# If the user has specified project directories, assume those directories
+# are not subject to COIN_SKIP_PROJECTS. On the other hand, directories
+# that are not projects (but presumably contain projects) will be subject
+# to COIN_SKIP_PROJECTS. If the user didn't specify anything, the default
+# is the projects under the current directory.
+
+if [[ $userSpecifiedDirs -eq 1 ]] ; then
+  for dir in ${userDirs[@]} ; do
+    if isAProject $dir ; then
+      # echo "  $dir will be immune to COIN_SKIP_PROJECTS"
+      noSkipDirs+=($dir)
+    else
+      if [[ doRecurse -eq 1 ]] ; then
+         dirsToProcess+=(`findProjects $dir`)
+      else
+         dirsToProcess+=($dir)
+      fi
+    fi
+  done
+else
+  if [[ doRecurse -eq 1 ]] ; then
+      dirsToProcess+=(`findProjects .`)
+  else
+      dirsToProcess+=(".")
+  fi
+fi
+
+# echo "dirsToProcess (${#dirsToProcess[@]}): ${dirsToProcess[*]}"
+# echo "noSkipDirs (${#noSkipDirs[@]}): ${noSkipDirs[*]}"
+
+# Allow that there might be overlap and remove it from dirsToProcess.
+
+if [[ ${#noSkipDirs[@]} -gt 0 && ${#dirsToProcess[@]} -gt 0 ]] ; then
+  for dir in ${noSkipDirs[@]} ; do
+    canonicalNoSkipDirs+=(`cd $dir ; pwd`)
+  done
+  for (( ndx=0 ; ndx < ${#dirsToProcess[@]} ; ndx++ )) ; do
+    canonicalDir=`cd ${dirsToProcess[$ndx]} ; pwd`
+    for dir in ${canonicalNoSkipDirs[@]} ; do
+      if [[ $canonicalDir != $dir ]] ; then
+        tmpDir+=(${dirsToProcess[$ndx]})
+	break
+      fi
+    done
+  done
+  dirsToProcess=(${tmpDir[@]})
+  unset tmpDir
+fi
+
+# echo "dirsToProcess (${#dirsToProcess[@]}): ${dirsToProcess[*]}"
+# echo "noSkipDirs (${#noSkipDirs[@]}): ${noSkipDirs[*]}"
+
+# Now consider if any of the projects in dirsToProcess are listed in
+# COIN_SKIP_PROJECTS. Here, we want to check if a project in COIN_SKIP_PROJECTS
+# is a suffix of the value from dirsToProcess.
+
+if [[ -n "$COIN_SKIP_PROJECTS" && ${#dirsToProcess[@]} -gt 0 ]] ; then
+  skipProjects=($COIN_SKIP_PROJECTS)
+  for (( ndx=0 ; ndx < ${#dirsToProcess[@]} ; ndx++ )) ; do
+    drop=0
+    for dir in ${skipProjects[@]} ; do
+      # echo "comparing [$ndx] ${dirsToProcess[$ndx]} with $dir"
+      if expr "${dirsToProcess[$ndx]}" : '.*/'"$dir"'$' &>/dev/null ; then
+        # echo "  dropping ${dirsToProcess[$ndx]}"
+	drop=1
+	break
+      fi
+    done
+    if [[ $drop -eq 0 ]] ; then
+      tmpDir+=(${dirsToProcess[$ndx]})
+    fi
+  done
+  dirsToProcess=(${tmpDir[@]})
+  unset tmpDir
+fi
+
+# echo "dirsToProcess (${#dirsToProcess[@]}): ${dirsToProcess[*]}"
+# echo "noSkipDirs (${#noSkipDirs[@]}): ${noSkipDirs[*]}"
+
+# Finally, we can join all the directories into one big happy list.
+
+dirsToProcess+=(${noSkipDirs[@]})
+
+# If recursion is permitted, find directories which contain a file
+# configure.ac.
+
+if [[ $doRecurse = 1 ]] ; then
+  for dir in ${dirsToProcess[@]} ; do
+    # echo "  diving in $dir"
+    tmp=`find $dir -name configure.ac | sed -e s,/configure.ac,,g`
+    # echo "  result: $tmp"
+    candDirs+=($tmp)
+  done
+else
+  candDirs=(${dirsToProcess[@]})
+fi
+
+echo "candDirs (${#candDirs[@]}): ${candDirs[*]}"
+
+# Winnow the candidates.  Process a directory only if the configure.ac file
+# contains at least one macro that starts with AC_COIN_.
+
+for dir in ${candDirs[@]} ; do
+  if [[ -r $dir/configure.ac ]] ; then
+    if grep AC_COIN_ $dir/configure.ac &>/dev/null || \
+       test $doForeign -eq 1 ; then
+      dirs+=($dir)
+    else
+      echo "  Skipping foreign configure.ac in '$dir'."
+    fi
+  fi
+done
+
+# Set a trap so that we'll clean up any links on exit, for whatever reason.
+# Note that this executes on normal exit, too, so don't do anything rash.
+
+topLink=
+subLink=
+trap 'exit_status=$?
+  cleanupOnErrorExit
+  exit $exit_status' 0
+
+# And now the main event. Process each directory.
+
+echo "Running autotools in ${dirs[*]}"
+
+if [[ $dryRun -eq 1 ]] ; then
+  exit
+fi
+
+buildtoolsLinks=
+
+for dir in ${dirs[@]} ; do
+  if test -r $dir/configure.ac; then
+    cd $dir
+    echo "Processing $dir ..."
+
+# Do we need a BuildTools subdirectory here? The criteria is that install-sh
+# already exists, or Makefile.am (which may include Makemain.inc), or we're
+# forcing installation of the configure scripts.  Assuming we need BuildTools,
+# what BuildTools should we use? If a BuildTools is already present, that's
+# it.  Otherwise, assume that runautotooldDir is BuildTools. Allow that the
+# user may have linked to a BuildTools.
+
+    needScripts=1
+    if test $suppressScripts = 1 ; then
+      needScripts=0
+    fi
+    if test -f Makefile.am || test $needScripts = 1 ; then
+      if test -d BuildTools || test -L BuildTools ; then
+        createLink=0
+        toolsDir=`pwd`/BuildTools
+      else
+        createLink=1
+        toolsDir=$runautotoolDir
+      fi
+      echo "  BuildTools directory: $toolsDir"
+
+# Test to be sure that run_autotools is coming from the BuildTools directory.
+
+      if test $createLink = 0 && test "$toolsDir" != "$runautotoolDir" ; then
+        echo "WARNING: using run_autotools from $runautotoolDir"
+        echo "         but BuildTools is $toolsDir."
+        echo "         Consider carefully if this is what you wanted to do."
+      fi
+
+# coin.m4 should live in the same directory; failure is fatal.
+
+      if test ! -r $toolsDir/coin.m4 ; then
+        echo "Cannot find Coin autotools macro file $toolsDir/coin.m4."
+        echo "It should be in the BuildTools directory."
+        exit 1
+      fi
+
+# Install a link, if needed.
+
+      if test $createLink = 1 ; then
+        ln -s $toolsDir BuildTools
+        buildtoolsLinks="$buildtoolsLinks `pwd`/BuildTools"
+        echo "  creating temporary link for ./BuildTools -> $toolsDir"
+      fi
+
+# And refresh the autotools scripts, if needed.
+
+      if test $needScripts = 1 ; then
+        echo "  refreshing autotools scripts in this directory."
+        for file in $autotoolsFiles ; do
+          if test -e BuildTools/$file ; then
+            cp BuildTools/$file .
+          elif test -e $AUTOTOOLS_DIR/share/automake-${ver_automake:0:4}/$file ; then
+            cp $AUTOTOOLS_DIR/share/automake-${ver_automake:0:4}/$file .
+          elif test -e $AUTOTOOLS_DIR/share/libtool/build-aux/$file ; then
+            cp $AUTOTOOLS_DIR/share/libtool/build-aux/$file .
+          else
+            echo "  Do not know where to take $file from."
+            exit 1
+          fi
+          if test -e BuildTools/${file}.patch ; then
+            patch -p0 < BuildTools/${file}.patch
+          fi
+        done
+      fi
+
+    fi
+
+# Get on with running the autotools.
+
+    m4Dirs="-I $AUTOTOOLS_DIR/share/aclocal"
+    m4Dirs="$m4Dirs -I $toolsDir"
+    if test -d m4 ; then
+      m4Dirs="$m4Dirs -I m4"
+    fi
+    echo "  running aclocal in $dir"
+    aclocal $m4Dirs
+
+# Not all projects make use of libtool, so check before we try to apply the
+# libtool patch.
+
+    if grep -q -F '[_LT_COPYING]' aclocal.m4 ; then
+      echo "  apply libtool.m4 patch to support ICL"
+      patch -p1 < BuildTools/libtool-icl.patch
+    fi
+    if grep AC_CONFIG_HEADER configure.ac >/dev/null 2>&1; then
+      echo "  running autoheader in $dir"
+      autoheader || exit 1
+    fi
+    echo "  running automake in $dir"
+    automake || exit 1
+    echo "  running autoconf in $dir"
+    autoconf || exit 1
+    cd $startDir
+  else
+    # Serious confusion! Should not reach here.
+    echo "*** No configure.ac file in $dir - SKIPPING! ***"
+  fi
+done
+
+# Remove the links. Yeah, the trap will do this, but it never hurts to clean
+# up properly.
+
+if test -n "$buildtoolsLinks" ; then
+  echo "Removing temporary links to BuildTools."
+  for link in $buildtoolsLinks ; do
+    # echo "  removing temporary link for BuildTools: $link"
+    rm -rf $link
+  done
+  buildtoolsLinks=
+fi
+
+exit
+

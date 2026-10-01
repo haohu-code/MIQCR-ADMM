@@ -1,0 +1,356 @@
+Family,Instance,RawFile,K,N
+qap,chr12a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr12a.dat,0,144
+qap,chr12b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr12b.dat,0,144
+qap,chr12c,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr12c.dat,0,144
+qap,chr15a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr15a.dat,0,225
+qap,chr15b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr15b.dat,0,225
+qap,chr15c,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr15c.dat,0,225
+qap,chr18a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr18a.dat,0,324
+qap,chr18b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr18b.dat,0,324
+qap,chr20a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr20a.dat,0,400
+qap,chr20b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr20b.dat,0,400
+qap,chr20c,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr20c.dat,0,400
+qap,chr22a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr22a.dat,0,484
+qap,chr22b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr22b.dat,0,484
+qap,chr25a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/chr25a.dat,0,625
+qap,els19,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/els19.dat,0,361
+qap,esc16a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16a.dat,0,256
+qap,esc16b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16b.dat,0,256
+qap,esc16c,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16c.dat,0,256
+qap,esc16d,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16d.dat,0,256
+qap,esc16e,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16e.dat,0,256
+qap,esc16f,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16f.dat,0,256
+qap,esc16g,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16g.dat,0,256
+qap,esc16h,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16h.dat,0,256
+qap,esc16i,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16i.dat,0,256
+qap,esc16j,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/esc16j.dat,0,256
+qap,had12,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/had12.dat,0,144
+qap,had14,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/had14.dat,0,196
+qap,had16,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/had16.dat,0,256
+qap,had18,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/had18.dat,0,324
+qap,had20,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/had20.dat,0,400
+qap,kra30a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/kra30a.dat,0,900
+qap,kra30b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/kra30b.dat,0,900
+qap,nug12,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug12.dat,0,144
+qap,nug14,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug14.dat,0,196
+qap,nug15,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug15.dat,0,225
+qap,nug16a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug16a.dat,0,256
+qap,nug16b,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug16b.dat,0,256
+qap,nug17,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug17.dat,0,289
+qap,nug18,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug18.dat,0,324
+qap,nug20,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug20.dat,0,400
+qap,nug21,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug21.dat,0,441
+qap,nug22,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug22.dat,0,484
+qap,nug24,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug24.dat,0,576
+qap,nug25,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug25.dat,0,625
+qap,nug27,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug27.dat,0,729
+qap,nug28,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug28.dat,0,784
+qap,nug30,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/nug30.dat,0,900
+qap,rou12,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/rou12.dat,0,144
+qap,rou15,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/rou15.dat,0,225
+qap,rou20,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/rou20.dat,0,400
+qap,scr12,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/scr12.dat,0,144
+qap,scr15,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/scr15.dat,0,225
+qap,scr20,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/scr20.dat,0,400
+qap,tai10a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tai10a.dat,0,100
+qap,tai12a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tai12a.dat,0,144
+qap,tai15a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tai15a.dat,0,225
+qap,tai17a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tai17a.dat,0,289
+qap,tai20a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tai20a.dat,0,400
+qap,tai25a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tai25a.dat,0,625
+qap,tai30a,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tai30a.dat,0,900
+qap,tho30,raw_data/qap/upstream/qap-a0e8cbacf270e7f8927afe79e65bf8fe89eb4412/inst/qaplib/tho30.dat,0,900
+kcluster,kcluster120_025_30_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_30_1.dat,0,120
+kcluster,kcluster120_025_30_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_30_2.dat,0,120
+kcluster,kcluster120_025_30_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_30_3.dat,0,120
+kcluster,kcluster120_025_30_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_30_4.dat,0,120
+kcluster,kcluster120_025_30_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_30_5.dat,0,120
+kcluster,kcluster120_025_60_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_60_1.dat,0,120
+kcluster,kcluster120_025_60_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_60_2.dat,0,120
+kcluster,kcluster120_025_60_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_60_3.dat,0,120
+kcluster,kcluster120_025_60_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_60_4.dat,0,120
+kcluster,kcluster120_025_60_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_025_60_5.dat,0,120
+kcluster,kcluster120_050_30_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_30_1.dat,0,120
+kcluster,kcluster120_050_30_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_30_2.dat,0,120
+kcluster,kcluster120_050_30_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_30_3.dat,0,120
+kcluster,kcluster120_050_30_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_30_4.dat,0,120
+kcluster,kcluster120_050_30_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_30_5.dat,0,120
+kcluster,kcluster120_050_60_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_60_1.dat,0,120
+kcluster,kcluster120_050_60_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_60_2.dat,0,120
+kcluster,kcluster120_050_60_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_60_3.dat,0,120
+kcluster,kcluster120_050_60_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_60_4.dat,0,120
+kcluster,kcluster120_050_60_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_050_60_5.dat,0,120
+kcluster,kcluster120_075_30_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_30_1.dat,0,120
+kcluster,kcluster120_075_30_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_30_2.dat,0,120
+kcluster,kcluster120_075_30_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_30_3.dat,0,120
+kcluster,kcluster120_075_30_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_30_4.dat,0,120
+kcluster,kcluster120_075_30_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_30_5.dat,0,120
+kcluster,kcluster120_075_60_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_60_1.dat,0,120
+kcluster,kcluster120_075_60_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_60_2.dat,0,120
+kcluster,kcluster120_075_60_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_60_3.dat,0,120
+kcluster,kcluster120_075_60_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_60_4.dat,0,120
+kcluster,kcluster120_075_60_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_120/kcluster120_075_60_5.dat,0,120
+kcluster,kcluster160_025_40_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_40_1.dat,0,160
+kcluster,kcluster160_025_40_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_40_2.dat,0,160
+kcluster,kcluster160_025_40_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_40_3.dat,0,160
+kcluster,kcluster160_025_40_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_40_4.dat,0,160
+kcluster,kcluster160_025_40_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_40_5.dat,0,160
+kcluster,kcluster160_025_80_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_80_1.dat,0,160
+kcluster,kcluster160_025_80_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_80_2.dat,0,160
+kcluster,kcluster160_025_80_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_80_3.dat,0,160
+kcluster,kcluster160_025_80_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_80_4.dat,0,160
+kcluster,kcluster160_025_80_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_025_80_5.dat,0,160
+kcluster,kcluster160_050_40_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_40_1.dat,0,160
+kcluster,kcluster160_050_40_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_40_2.dat,0,160
+kcluster,kcluster160_050_40_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_40_3.dat,0,160
+kcluster,kcluster160_050_40_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_40_4.dat,0,160
+kcluster,kcluster160_050_40_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_40_5.dat,0,160
+kcluster,kcluster160_050_80_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_80_1.dat,0,160
+kcluster,kcluster160_050_80_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_80_2.dat,0,160
+kcluster,kcluster160_050_80_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_80_3.dat,0,160
+kcluster,kcluster160_050_80_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_80_4.dat,0,160
+kcluster,kcluster160_050_80_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_050_80_5.dat,0,160
+kcluster,kcluster160_075_40_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_40_1.dat,0,160
+kcluster,kcluster160_075_40_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_40_2.dat,0,160
+kcluster,kcluster160_075_40_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_40_3.dat,0,160
+kcluster,kcluster160_075_40_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_40_4.dat,0,160
+kcluster,kcluster160_075_40_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_40_5.dat,0,160
+kcluster,kcluster160_075_80_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_80_1.dat,0,160
+kcluster,kcluster160_075_80_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_80_2.dat,0,160
+kcluster,kcluster160_075_80_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_80_3.dat,0,160
+kcluster,kcluster160_075_80_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_80_4.dat,0,160
+kcluster,kcluster160_075_80_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_160/kcluster160_075_80_5.dat,0,160
+kcluster,kcluster80_025_20_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_20_1.dat,0,80
+kcluster,kcluster80_025_20_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_20_2.dat,0,80
+kcluster,kcluster80_025_20_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_20_3.dat,0,80
+kcluster,kcluster80_025_20_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_20_4.dat,0,80
+kcluster,kcluster80_025_20_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_20_5.dat,0,80
+kcluster,kcluster80_025_40_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_40_1.dat,0,80
+kcluster,kcluster80_025_40_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_40_2.dat,0,80
+kcluster,kcluster80_025_40_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_40_3.dat,0,80
+kcluster,kcluster80_025_40_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_40_4.dat,0,80
+kcluster,kcluster80_025_40_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_025_40_5.dat,0,80
+kcluster,kcluster80_050_20_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_20_1.dat,0,80
+kcluster,kcluster80_050_20_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_20_2.dat,0,80
+kcluster,kcluster80_050_20_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_20_3.dat,0,80
+kcluster,kcluster80_050_20_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_20_4.dat,0,80
+kcluster,kcluster80_050_20_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_20_5.dat,0,80
+kcluster,kcluster80_050_40_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_40_1.dat,0,80
+kcluster,kcluster80_050_40_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_40_2.dat,0,80
+kcluster,kcluster80_050_40_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_40_3.dat,0,80
+kcluster,kcluster80_050_40_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_40_4.dat,0,80
+kcluster,kcluster80_050_40_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_050_40_5.dat,0,80
+kcluster,kcluster80_075_20_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_20_1.dat,0,80
+kcluster,kcluster80_075_20_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_20_2.dat,0,80
+kcluster,kcluster80_075_20_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_20_3.dat,0,80
+kcluster,kcluster80_075_20_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_20_4.dat,0,80
+kcluster,kcluster80_075_20_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_20_5.dat,0,80
+kcluster,kcluster80_075_40_1,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_40_1.dat,0,80
+kcluster,kcluster80_075_40_2,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_40_2.dat,0,80
+kcluster,kcluster80_075_40_3,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_40_3.dat,0,80
+kcluster,kcluster80_075_40_4,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_40_4.dat,0,80
+kcluster,kcluster80_075_40_5,raw_data/kcluster/upstream/k-cluster-0c42bc7a0d20f3bad6eb838d86706fd1b500cbf2/k-cluster_80/kcluster80_075_40_5.dat,0,80
+cycle_cover,qcc_ER_1,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_1.txt,0,119
+cycle_cover,qcc_ER_11,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_11.txt,0,195
+cycle_cover,qcc_ER_12,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_12.txt,0,327
+cycle_cover,qcc_ER_13,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_13.txt,0,434
+cycle_cover,qcc_ER_14,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_14.txt,0,793
+cycle_cover,qcc_ER_2,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_2.txt,0,177
+cycle_cover,qcc_ER_3,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_3.txt,0,284
+cycle_cover,qcc_ER_4,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_4.txt,0,361
+cycle_cover,qcc_ER_5,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_5.txt,0,468
+cycle_cover,qcc_ER_6,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_6.txt,0,592
+cycle_cover,qcc_ER_7,raw_data/cycle_cover/instances/Erdös-Rényi instances/ER_7.txt,0,754
+cycle_cover,qcc_RER_1,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_1.txt,0,113
+cycle_cover,qcc_RER_11,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_11.txt,0,194
+cycle_cover,qcc_RER_12,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_12.txt,0,308
+cycle_cover,qcc_RER_13,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_13.txt,0,435
+cycle_cover,qcc_RER_14,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_14.txt,0,770
+cycle_cover,qcc_RER_2,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_2.txt,0,169
+cycle_cover,qcc_RER_3,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_3.txt,0,256
+cycle_cover,qcc_RER_4,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_4.txt,0,347
+cycle_cover,qcc_RER_5,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_5.txt,0,495
+cycle_cover,qcc_RER_6,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_6.txt,0,623
+cycle_cover,qcc_RER_7,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_7.txt,0,746
+cycle_cover,qcc_RER_8,raw_data/cycle_cover/instances/Erdös-Rényi instances/RER_8.txt,0,995
+cycle_cover,qcc_MH_1,raw_data/cycle_cover/instances/Manhattan instances/MH_1.txt,0,50
+cycle_cover,qcc_MH_10,raw_data/cycle_cover/instances/Manhattan instances/MH_10.txt,0,192
+cycle_cover,qcc_MH_11,raw_data/cycle_cover/instances/Manhattan instances/MH_11.txt,0,240
+cycle_cover,qcc_MH_12,raw_data/cycle_cover/instances/Manhattan instances/MH_12.txt,0,300
+cycle_cover,qcc_MH_13,raw_data/cycle_cover/instances/Manhattan instances/MH_13.txt,0,360
+cycle_cover,qcc_MH_14,raw_data/cycle_cover/instances/Manhattan instances/MH_14.txt,0,375
+cycle_cover,qcc_MH_15,raw_data/cycle_cover/instances/Manhattan instances/MH_15.txt,0,450
+cycle_cover,qcc_MH_16,raw_data/cycle_cover/instances/Manhattan instances/MH_16.txt,0,540
+cycle_cover,qcc_MH_17,raw_data/cycle_cover/instances/Manhattan instances/MH_17.txt,0,630
+cycle_cover,qcc_MH_18,raw_data/cycle_cover/instances/Manhattan instances/MH_18.txt,0,648
+cycle_cover,qcc_MH_19,raw_data/cycle_cover/instances/Manhattan instances/MH_19.txt,0,756
+cycle_cover,qcc_MH_2,raw_data/cycle_cover/instances/Manhattan instances/MH_2.txt,0,200
+cycle_cover,qcc_MH_20,raw_data/cycle_cover/instances/Manhattan instances/MH_20.txt,0,882
+cycle_cover,qcc_MH_3,raw_data/cycle_cover/instances/Manhattan instances/MH_3.txt,0,450
+cycle_cover,qcc_MH_4,raw_data/cycle_cover/instances/Manhattan instances/MH_4.txt,0,512
+cycle_cover,qcc_MH_5,raw_data/cycle_cover/instances/Manhattan instances/MH_5.txt,0,578
+cycle_cover,qcc_MH_6,raw_data/cycle_cover/instances/Manhattan instances/MH_6.txt,0,648
+cycle_cover,qcc_MH_7,raw_data/cycle_cover/instances/Manhattan instances/MH_7.txt,0,722
+cycle_cover,qcc_MH_8,raw_data/cycle_cover/instances/Manhattan instances/MH_8.txt,0,800
+cycle_cover,qcc_REL_1,raw_data/cycle_cover/instances/Reload instances/REL_1.txt,0,90
+cycle_cover,qcc_REL_10,raw_data/cycle_cover/instances/Reload instances/REL_10.txt,0,90
+cycle_cover,qcc_REL_11,raw_data/cycle_cover/instances/Reload instances/REL_11.txt,0,90
+cycle_cover,qcc_REL_12,raw_data/cycle_cover/instances/Reload instances/REL_12.txt,0,90
+cycle_cover,qcc_REL_13,raw_data/cycle_cover/instances/Reload instances/REL_13.txt,0,90
+cycle_cover,qcc_REL_14,raw_data/cycle_cover/instances/Reload instances/REL_14.txt,0,90
+cycle_cover,qcc_REL_15,raw_data/cycle_cover/instances/Reload instances/REL_15.txt,0,90
+cycle_cover,qcc_REL_16,raw_data/cycle_cover/instances/Reload instances/REL_16.txt,0,90
+cycle_cover,qcc_REL_17,raw_data/cycle_cover/instances/Reload instances/REL_17.txt,0,90
+cycle_cover,qcc_REL_18,raw_data/cycle_cover/instances/Reload instances/REL_18.txt,0,90
+cycle_cover,qcc_REL_19,raw_data/cycle_cover/instances/Reload instances/REL_19.txt,0,90
+cycle_cover,qcc_REL_2,raw_data/cycle_cover/instances/Reload instances/REL_2.txt,0,90
+cycle_cover,qcc_REL_20,raw_data/cycle_cover/instances/Reload instances/REL_20.txt,0,90
+cycle_cover,qcc_REL_21,raw_data/cycle_cover/instances/Reload instances/REL_21.txt,0,210
+cycle_cover,qcc_REL_22,raw_data/cycle_cover/instances/Reload instances/REL_22.txt,0,210
+cycle_cover,qcc_REL_23,raw_data/cycle_cover/instances/Reload instances/REL_23.txt,0,210
+cycle_cover,qcc_REL_24,raw_data/cycle_cover/instances/Reload instances/REL_24.txt,0,210
+cycle_cover,qcc_REL_25,raw_data/cycle_cover/instances/Reload instances/REL_25.txt,0,210
+cycle_cover,qcc_REL_26,raw_data/cycle_cover/instances/Reload instances/REL_26.txt,0,210
+cycle_cover,qcc_REL_27,raw_data/cycle_cover/instances/Reload instances/REL_27.txt,0,210
+cycle_cover,qcc_REL_28,raw_data/cycle_cover/instances/Reload instances/REL_28.txt,0,210
+cycle_cover,qcc_REL_29,raw_data/cycle_cover/instances/Reload instances/REL_29.txt,0,210
+cycle_cover,qcc_REL_3,raw_data/cycle_cover/instances/Reload instances/REL_3.txt,0,90
+cycle_cover,qcc_REL_30,raw_data/cycle_cover/instances/Reload instances/REL_30.txt,0,210
+cycle_cover,qcc_REL_31,raw_data/cycle_cover/instances/Reload instances/REL_31.txt,0,210
+cycle_cover,qcc_REL_32,raw_data/cycle_cover/instances/Reload instances/REL_32.txt,0,210
+cycle_cover,qcc_REL_33,raw_data/cycle_cover/instances/Reload instances/REL_33.txt,0,210
+cycle_cover,qcc_REL_34,raw_data/cycle_cover/instances/Reload instances/REL_34.txt,0,210
+cycle_cover,qcc_REL_35,raw_data/cycle_cover/instances/Reload instances/REL_35.txt,0,210
+cycle_cover,qcc_REL_36,raw_data/cycle_cover/instances/Reload instances/REL_36.txt,0,210
+cycle_cover,qcc_REL_37,raw_data/cycle_cover/instances/Reload instances/REL_37.txt,0,210
+cycle_cover,qcc_REL_38,raw_data/cycle_cover/instances/Reload instances/REL_38.txt,0,210
+cycle_cover,qcc_REL_39,raw_data/cycle_cover/instances/Reload instances/REL_39.txt,0,210
+cycle_cover,qcc_REL_4,raw_data/cycle_cover/instances/Reload instances/REL_4.txt,0,90
+cycle_cover,qcc_REL_40,raw_data/cycle_cover/instances/Reload instances/REL_40.txt,0,210
+cycle_cover,qcc_REL_41,raw_data/cycle_cover/instances/Reload instances/REL_41.txt,0,380
+cycle_cover,qcc_REL_42,raw_data/cycle_cover/instances/Reload instances/REL_42.txt,0,380
+cycle_cover,qcc_REL_43,raw_data/cycle_cover/instances/Reload instances/REL_43.txt,0,380
+cycle_cover,qcc_REL_44,raw_data/cycle_cover/instances/Reload instances/REL_44.txt,0,380
+cycle_cover,qcc_REL_45,raw_data/cycle_cover/instances/Reload instances/REL_45.txt,0,380
+cycle_cover,qcc_REL_46,raw_data/cycle_cover/instances/Reload instances/REL_46.txt,0,380
+cycle_cover,qcc_REL_47,raw_data/cycle_cover/instances/Reload instances/REL_47.txt,0,380
+cycle_cover,qcc_REL_48,raw_data/cycle_cover/instances/Reload instances/REL_48.txt,0,380
+cycle_cover,qcc_REL_49,raw_data/cycle_cover/instances/Reload instances/REL_49.txt,0,380
+cycle_cover,qcc_REL_5,raw_data/cycle_cover/instances/Reload instances/REL_5.txt,0,90
+cycle_cover,qcc_REL_50,raw_data/cycle_cover/instances/Reload instances/REL_50.txt,0,380
+cycle_cover,qcc_REL_51,raw_data/cycle_cover/instances/Reload instances/REL_51.txt,0,380
+cycle_cover,qcc_REL_52,raw_data/cycle_cover/instances/Reload instances/REL_52.txt,0,380
+cycle_cover,qcc_REL_53,raw_data/cycle_cover/instances/Reload instances/REL_53.txt,0,380
+cycle_cover,qcc_REL_54,raw_data/cycle_cover/instances/Reload instances/REL_54.txt,0,380
+cycle_cover,qcc_REL_55,raw_data/cycle_cover/instances/Reload instances/REL_55.txt,0,380
+cycle_cover,qcc_REL_56,raw_data/cycle_cover/instances/Reload instances/REL_56.txt,0,380
+cycle_cover,qcc_REL_57,raw_data/cycle_cover/instances/Reload instances/REL_57.txt,0,380
+cycle_cover,qcc_REL_58,raw_data/cycle_cover/instances/Reload instances/REL_58.txt,0,380
+cycle_cover,qcc_REL_59,raw_data/cycle_cover/instances/Reload instances/REL_59.txt,0,380
+cycle_cover,qcc_REL_6,raw_data/cycle_cover/instances/Reload instances/REL_6.txt,0,90
+cycle_cover,qcc_REL_60,raw_data/cycle_cover/instances/Reload instances/REL_60.txt,0,380
+cycle_cover,qcc_REL_7,raw_data/cycle_cover/instances/Reload instances/REL_7.txt,0,90
+cycle_cover,qcc_REL_8,raw_data/cycle_cover/instances/Reload instances/REL_8.txt,0,90
+cycle_cover,qcc_REL_9,raw_data/cycle_cover/instances/Reload instances/REL_9.txt,0,90
+semi_assignment,qsap_10_3,raw_data/semi_assignment/upstream/qsap1/qsap_10_3.mat,0,240
+semi_assignment,qsap_12_3,raw_data/semi_assignment/upstream/qsap1/qsap_12_3.mat,0,140
+semi_assignment,qsap_12_4,raw_data/semi_assignment/upstream/qsap1/qsap_12_4.mat,0,175
+semi_assignment,qsap_15_2,raw_data/semi_assignment/upstream/qsap1/qsap_15_2.mat,0,210
+semi_assignment,qsap_15_3,raw_data/semi_assignment/upstream/qsap1/qsap_15_3.mat,0,245
+semi_assignment,qsap_15_4,raw_data/semi_assignment/upstream/qsap1/qsap_15_4.mat,0,245
+semi_assignment,qsap_15_5,raw_data/semi_assignment/upstream/qsap1/qsap_15_5.mat,0,15
+semi_assignment,qsap_18_3,raw_data/semi_assignment/upstream/qsap1/qsap_18_3.mat,0,54
+semi_assignment,qsap_18_4,raw_data/semi_assignment/upstream/qsap1/qsap_18_4.mat,0,72
+semi_assignment,qsap_18_5,raw_data/semi_assignment/upstream/qsap1/qsap_18_5.mat,0,90
+semi_assignment,qsap_18_6,raw_data/semi_assignment/upstream/qsap1/qsap_18_6.mat,0,108
+semi_assignment,qsap_20_3,raw_data/semi_assignment/upstream/qsap1/qsap_20_3.mat,0,60
+semi_assignment,qsap_20_4,raw_data/semi_assignment/upstream/qsap1/qsap_20_4.mat,0,80
+semi_assignment,qsap_20_5,raw_data/semi_assignment/upstream/qsap1/qsap_20_5.mat,0,100
+semi_assignment,qsap_20_6,raw_data/semi_assignment/upstream/qsap1/qsap_20_6.mat,0,120
+semi_assignment,qsap_25_4,raw_data/semi_assignment/upstream/qsap1/qsap_25_4.mat,0,100
+semi_assignment,qsap_25_5,raw_data/semi_assignment/upstream/qsap1/qsap_25_5.mat,0,125
+semi_assignment,qsap_25_6,raw_data/semi_assignment/upstream/qsap1/qsap_25_6.mat,0,150
+semi_assignment,qsap_25_7,raw_data/semi_assignment/upstream/qsap1/qsap_25_7.mat,0,175
+semi_assignment,qsap_30_4,raw_data/semi_assignment/upstream/qsap1/qsap_30_4.mat,0,120
+semi_assignment,qsap_30_5,raw_data/semi_assignment/upstream/qsap1/qsap_30_5.mat,0,150
+semi_assignment,qsap_30_6,raw_data/semi_assignment/upstream/qsap1/qsap_30_6.mat,0,180
+semi_assignment,qsap_30_7,raw_data/semi_assignment/upstream/qsap1/qsap_30_7.mat,0,210
+semi_assignment,qsap_30_8,raw_data/semi_assignment/upstream/qsap1/qsap_30_8.mat,0,210
+semi_assignment,qsap_35_4,raw_data/semi_assignment/upstream/qsap1/qsap_35_4.mat,0,210
+semi_assignment,qsap_35_5,raw_data/semi_assignment/upstream/qsap1/qsap_35_5.mat,0,210
+semi_assignment,qsap_35_6,raw_data/semi_assignment/upstream/qsap1/qsap_35_6.mat,0,210
+semi_assignment,qsap_35_7,raw_data/semi_assignment/upstream/qsap1/qsap_35_7.mat,0,210
+semi_assignment,qsap_35_8,raw_data/semi_assignment/upstream/qsap1/qsap_35_8.mat,0,210
+semi_assignment,qsap_5_3,raw_data/semi_assignment/upstream/qsap1/qsap_5_3.mat,0,210
+partition,anna_k3,raw_data/graph_partition/anna.col,3,414
+partition,anna_k4,raw_data/graph_partition/anna.col,4,552
+partition,david_k3,raw_data/graph_partition/david.col,3,261
+partition,david_k4,raw_data/graph_partition/david.col,4,348
+partition,games120_k3,raw_data/graph_partition/games120.col,3,360
+partition,games120_k4,raw_data/graph_partition/games120.col,4,480
+partition,huck_k3,raw_data/graph_partition/huck.col,3,222
+partition,huck_k4,raw_data/graph_partition/huck.col,4,296
+partition,jean_k3,raw_data/graph_partition/jean.col,3,240
+partition,jean_k4,raw_data/graph_partition/jean.col,4,320
+partition,miles1000_k3,raw_data/graph_partition/miles1000.col,3,384
+partition,miles1000_k4,raw_data/graph_partition/miles1000.col,4,512
+partition,miles1500_k3,raw_data/graph_partition/miles1500.col,3,384
+partition,miles1500_k4,raw_data/graph_partition/miles1500.col,4,512
+partition,miles250_k3,raw_data/graph_partition/miles250.col,3,384
+partition,miles250_k4,raw_data/graph_partition/miles250.col,4,512
+partition,miles500_k3,raw_data/graph_partition/miles500.col,3,384
+partition,miles500_k4,raw_data/graph_partition/miles500.col,4,512
+partition,miles750_k3,raw_data/graph_partition/miles750.col,3,384
+partition,miles750_k4,raw_data/graph_partition/miles750.col,4,512
+partition,mulsol.i.1_k3,raw_data/graph_partition/mulsol.i.1.col,3,591
+partition,mulsol.i.1_k4,raw_data/graph_partition/mulsol.i.1.col,4,788
+partition,mulsol.i.2_k3,raw_data/graph_partition/mulsol.i.2.col,3,564
+partition,mulsol.i.2_k4,raw_data/graph_partition/mulsol.i.2.col,4,752
+partition,mulsol.i.3_k3,raw_data/graph_partition/mulsol.i.3.col,3,552
+partition,mulsol.i.3_k4,raw_data/graph_partition/mulsol.i.3.col,4,736
+partition,mulsol.i.4_k3,raw_data/graph_partition/mulsol.i.4.col,3,555
+partition,mulsol.i.4_k4,raw_data/graph_partition/mulsol.i.4.col,4,740
+partition,mulsol.i.5_k3,raw_data/graph_partition/mulsol.i.5.col,3,558
+partition,mulsol.i.5_k4,raw_data/graph_partition/mulsol.i.5.col,4,744
+partition,myciel3_k3,raw_data/graph_partition/myciel3.col,3,33
+partition,myciel3_k4,raw_data/graph_partition/myciel3.col,4,44
+partition,myciel4_k3,raw_data/graph_partition/myciel4.col,3,69
+partition,myciel4_k4,raw_data/graph_partition/myciel4.col,4,92
+partition,myciel5_k3,raw_data/graph_partition/myciel5.col,3,141
+partition,myciel5_k4,raw_data/graph_partition/myciel5.col,4,188
+partition,myciel6_k3,raw_data/graph_partition/myciel6.col,3,285
+partition,myciel6_k4,raw_data/graph_partition/myciel6.col,4,380
+partition,myciel7_k3,raw_data/graph_partition/myciel7.col,3,573
+partition,myciel7_k4,raw_data/graph_partition/myciel7.col,4,764
+partition,queen10_10_k3,raw_data/graph_partition/queen10_10.col,3,300
+partition,queen10_10_k4,raw_data/graph_partition/queen10_10.col,4,400
+partition,queen11_11_k3,raw_data/graph_partition/queen11_11.col,3,363
+partition,queen11_11_k4,raw_data/graph_partition/queen11_11.col,4,484
+partition,queen12_12_k3,raw_data/graph_partition/queen12_12.col,3,432
+partition,queen12_12_k4,raw_data/graph_partition/queen12_12.col,4,576
+partition,queen13_13_k3,raw_data/graph_partition/queen13_13.col,3,507
+partition,queen13_13_k4,raw_data/graph_partition/queen13_13.col,4,676
+partition,queen14_14_k3,raw_data/graph_partition/queen14_14.col,3,588
+partition,queen14_14_k4,raw_data/graph_partition/queen14_14.col,4,784
+partition,queen15_15_k3,raw_data/graph_partition/queen15_15.col,3,675
+partition,queen15_15_k4,raw_data/graph_partition/queen15_15.col,4,900
+partition,queen16_16_k3,raw_data/graph_partition/queen16_16.col,3,768
+partition,queen16_16_k4,raw_data/graph_partition/queen16_16.col,4,1024
+partition,queen5_5_k3,raw_data/graph_partition/queen5_5.col,3,75
+partition,queen5_5_k4,raw_data/graph_partition/queen5_5.col,4,100
+partition,queen6_6_k3,raw_data/graph_partition/queen6_6.col,3,108
+partition,queen6_6_k4,raw_data/graph_partition/queen6_6.col,4,144
+partition,queen7_7_k3,raw_data/graph_partition/queen7_7.col,3,147
+partition,queen7_7_k4,raw_data/graph_partition/queen7_7.col,4,196
+partition,queen8_12_k3,raw_data/graph_partition/queen8_12.col,3,288
+partition,queen8_12_k4,raw_data/graph_partition/queen8_12.col,4,384
+partition,queen8_8_k3,raw_data/graph_partition/queen8_8.col,3,192
+partition,queen8_8_k4,raw_data/graph_partition/queen8_8.col,4,256
+partition,queen9_9_k3,raw_data/graph_partition/queen9_9.col,3,243
+partition,queen9_9_k4,raw_data/graph_partition/queen9_9.col,4,324
+partition,zeroin.i.1_k3,raw_data/graph_partition/zeroin.i.1.col,3,633
+partition,zeroin.i.1_k4,raw_data/graph_partition/zeroin.i.1.col,4,844
+partition,zeroin.i.2_k3,raw_data/graph_partition/zeroin.i.2.col,3,633
+partition,zeroin.i.2_k4,raw_data/graph_partition/zeroin.i.2.col,4,844
+partition,zeroin.i.3_k3,raw_data/graph_partition/zeroin.i.3.col,3,618
+partition,zeroin.i.3_k4,raw_data/graph_partition/zeroin.i.3.col,4,824
